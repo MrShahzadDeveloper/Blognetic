@@ -1,9 +1,10 @@
-import React from 'react'
+import Button from "./Button"
 
-const HeadingBanner = () => {
+const HeadingBanner = ({ text }) => {
   return (
-    <div>
-      
+    <div className="flex justify-between items-center my-12 mx-20">
+      <h1 className="text-5xl text-[#333333] font-[700] ">{text}</h1>
+      <Button text="View All" bgColor="#7C4EE4" textColor="white" />
     </div>
   )
 }

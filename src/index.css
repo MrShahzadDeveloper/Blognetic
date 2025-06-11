@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-text {
+  @apply hover:text-[#7C4EE4] cursor-pointer duration-100 transition-all
+}

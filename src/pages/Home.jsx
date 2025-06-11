@@ -1,11 +1,17 @@
-import React from 'react'
+import Footer from "../components/Footer";
+import HeadingBanner from "../components/HeadingBanner";
+import Navbar from "../components/Navbar";
+import FloatingCard from '../components/FloatingCard'
 
 const Home = () => {
   return (
-    <div className="bg-Blue-400 flex items-center justify-center h-screen">
-      <h1 className="text-2xl font-bold text-white">Is it Working!</h1>
-    </div>
-  )
-}
+    <>
+      {/* <Navbar /> */}
+      {/* <Footer /> */}
+      {/* <HeadingBanner text="Our Recent Post" /> */}
+      {/* <FloatingCard /> */}
+    </>
+  );
+};
 
-export default Home
+export default Home;
