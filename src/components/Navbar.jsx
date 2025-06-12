@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#FFFFFF] flex justify-between items-center py-4 px-8 sm:px-16 sticky top-0">
+      <div className="bg-[#FFFFFF] flex justify-between items-center py-4 px-8 sm:px-16 sticky top-0 z-50 shadow-md">
         <div className="flex gap-3 items-center cursor-pointer">
           <img className="h-6 w-6 sm:h-8 sm:w-8 " src={logo} alt="blognetic" />
           <h1 className="font-[800] text-[20px] sm:text-[24px] text-[#333333] ">
