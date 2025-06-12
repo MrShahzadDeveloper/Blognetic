@@ -4,14 +4,15 @@ import Button from "./Button";
 import { useState } from "react";
 import { Menu } from "lucide-react";
 import { X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuLinks = [
-    { name: "Home", id: 1 },
-    { name: "Blogs", id: 2 },
-    { name: "About", id: 3 },
-    { name: "Contact Us", id: 4 },
-    { name: "Terms & Conditions", id: 5 },
+    { name: "Home", href: "/", id: 1 },
+    { name: "Blogs", href: "/blogs", id: 2 },
+    { name: "About", href: "/about", id: 3 },
+    { name: "Contact Us", href: "/contact", id: 4 },
+    { name: "Terms & Conditions", href: "/terms", id: 5 },
   ];
   const [visible, setVisible] = useState(false);
   const toggleMenu = () => {
@@ -20,7 +21,7 @@ const Navbar = () => {
 
   return (
     <>
-      <div className="bg-[#FFFFFF] flex justify-between items-center py-4 px-8 sm:px-16">
+      <div className="bg-[#FFFFFF] flex justify-between items-center py-4 px-8 sm:px-16 sticky top-0 z-50 shadow-md">
         <div className="flex gap-3 items-center cursor-pointer">
           <img className="h-6 w-6 sm:h-8 sm:w-8 " src={logo} alt="blognetic" />
           <h1 className="font-[800] text-[20px] sm:text-[24px] text-[#333333] ">
@@ -29,7 +30,13 @@ const Navbar = () => {
         </div>
         <div className="hidden md:flex items-center gap-8">
           {menuLinks.map((links) => (
-            <h4 key={links.id} className="hover:text-[#7C4EE4] cursor-pointer ">{links.name}</h4>
+            <Link
+              to={links.href}
+              key={links.id}
+              className="hover:text-[#7C4EE4] cursor-pointer "
+            >
+              {links.name}
+            </Link>
           ))}
           <Search strokeWidth={"0.75px"} />
           <Button text="Contact Us" textColor="white" bgColor={"#7C4EE4"} />
@@ -39,12 +46,17 @@ const Navbar = () => {
         </div>
       </div>
       {visible ? (
-        <div className="flex flex-col justify-center items-end mr-6">
-          <div className="bg-[#7f61c4] py-8 px-6 text-center flex flex-col gap-6 rounded-lg ">
+        <div onClick={toggleMenu} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex justify-end">
+          <div onClick={(e) => e.stopPropagation()} className="bg-[#7f61c4] py-28 text-center flex flex-col gap-3 rounded-l-lg w-[75%] max-w-xs h-full">
             {menuLinks.map((links) => (
-              <h4 className="text-white text-xl" key={links.id}>
+              <Link
+                to={links.href}
+                onClick={toggleMenu}
+                className="text-white text-xl py-2 active:bg-[#483080]"
+                key={links.id}
+              >
                 {links.name}
-              </h4>
+              </Link>
             ))}
           </div>
         </div>
