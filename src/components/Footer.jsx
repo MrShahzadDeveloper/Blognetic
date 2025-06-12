@@ -9,7 +9,7 @@ const Footer = () => {
   ];
   return (
     <>
-      <div className="h-[1px] bg-primary " />
+      <hr className="h-[1px] bg-primary " />
       <div className="bg-[#FFFFFF] flex flex-col justify-center items-center my-10 gap-10 ">
         <div>
           <div className="flex gap-3 items-center cursor-pointer">
