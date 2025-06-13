@@ -5,3 +5,29 @@
 .nav-text {
   @apply hover:text-[#7C4EE4] cursor-pointer duration-100 transition-all
 }
+
+/* For WebKit (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7C4EE4;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #6b3ecf;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7C4EE4 #f1f1f1;
+}

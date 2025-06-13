@@ -1,16 +1,18 @@
+import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
 
 const Footer = () => {
   const footerLinks = [
-    { name: "Home", id: 1 },
-    { name: "Blog", id: 2 },
-    { name: "About", id: 3 },
-    { name: "Contact Us", id: 4 },
+    { name: "Home", href: "/", id: 1 },
+    { name: "Blogs", href: "/blogs", id: 2 },
+    { name: "About", href: "/about", id: 3 },
+    { name: "Contact Us", href: "/contact", id: 4 },
+    { name: "Terms & Conditions", href: "/terms", id: 5 },
   ];
   return (
     <>
-      <div className="h-[1px] bg-primary " />
-      <div className="bg-[#FFFFFF] flex flex-col justify-center items-center my-10 gap-10 ">
+      <div className="h-[1px] bg-primary mt-16 " />
+      <div className="bg-[#FFFFFF] flex flex-col justify-center items-center mt-16 gap-10 ">
         <div>
           <div className="flex gap-3 items-center cursor-pointer">
             <img className="h-8 w-8 " src={logo} alt="blognetic" />
@@ -21,9 +23,9 @@ const Footer = () => {
         </div>
         <div className="hidden sm:flex gap-5">
           {footerLinks.map((links) => (
-            <h4 key={links.id} className="nav-text">
+            <Link to={links.href} key={links.id} className="nav-text">
               {links.name}
-            </h4>
+            </Link>
           ))}
         </div>
         <div className="bg-primary w-full flex justify-center items-center py-2">
