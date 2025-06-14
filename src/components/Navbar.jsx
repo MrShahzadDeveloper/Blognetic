@@ -28,7 +28,7 @@ const Navbar = () => {
             Blognetic
           </h1>
         </div>
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-8">
           {menuLinks.map((links) => (
             <Link
               to={links.href}
@@ -41,7 +41,7 @@ const Navbar = () => {
           <Search strokeWidth={"0.75px"} />
           <Button text="Contact Us" textColor="white" bgColor={"#7C4EE4"} />
         </div>
-        <div onClick={toggleMenu} className="flex md:hidden cursor-pointer">
+        <div onClick={toggleMenu} className="flex lg:hidden cursor-pointer">
           {visible ? <X size={24} /> : <Menu size={24} />}
         </div>
       </div>

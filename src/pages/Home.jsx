@@ -6,11 +6,9 @@ import Button from "../components/Button";
 import FloatingCard from "../components/FloatingCard";
 import HeadingBanner from "../components/HeadingBanner";
 import Cards from "../components/Cards";
-import { RepostCardList } from "../constant/cardLists";
+import { PopularList, RepostCardList } from "../constant/cardLists";
 
 const Home = () => {
-
-
   return (
     <>
       {/* First Section */}
@@ -28,13 +26,13 @@ const Home = () => {
         />
 
         {/* Main content */}
-        <div className="container mx-auto h-full flex justify-between items-center px-8">
+        <div className="container mx-auto h-full flex justify-center lg:justify-between items-center px-8">
           <div className="flex flex-col gap-6 max-w-[600px] z-10">
             <h3 className="text-white font-semibold text-lg">Featured Post</h3>
-            <h1 className="text-white text-5xl font-bold leading-tight">
+            <h1 className="text-white text-4xl lg:text-5xl font-bold leading-tight line-clamp-2 ">
               How AI will Change the Future
             </h1>
-            <p className="text-white text-lg leading-relaxed">
+            <p className="text-white text-lg leading-relaxed line-clamp-3">
               The future of AI will see home robots having enhanced
               intelligence, increased capabilities, and becoming more personal
               and possibly cute. For example, home robots will overcome
@@ -50,7 +48,7 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="z-10">
+          <div className="hidden lg:block z-10">
             <img
               src={homeImg}
               className="w-[410px] h-[410px] object-contain"
@@ -74,22 +72,22 @@ const Home = () => {
       </section>
       {/* Our Recent Posts */}
       <section className="mt-40">
-        <HeadingBanner text="Our Recent Post" />
-        <div className="flex justify-between items-center gap-20 mx-20 ">
+        <HeadingBanner  text="Our Recent Post" />
+        <div className="flex flex-col lg:flex-row  justify-between items-center gap-10 lg:gap-20 mx-20 mb-16 ">
           <img
             src={homeImg2}
-            className="w-[600px] h-[360px] rounded-lg"
+            className="w-[400px] h-[300px] md:w-[600px] md:h-[360px] object-cover rounded-lg"
             alt="VR & AI Technology illustration"
           />
-          <div className="flex flex-col gap-5 justify-start">
-            <div className="flex justify-start items-center gap-3">
+          <div className="flex flex-col gap-5 justify-start min-w-[350px] ">
+            <div className="flex justify- items-center gap-3">
               <span className="font-semibold text-secondary uppercase tracking-wider">
                 Development
               </span>
               <span className="text-gray-400">16 March 2025</span>
             </div>
             <div className="flex flex-col gap-5">
-              <h1 className="text-4xl font-bold text-secondary leading-snug">
+              <h1 className="text-4xl font-bold text-secondary leading-snug line-clamp-2 ">
                 How to make a Game look more attractive with New VR & AI
                 Technology
               </h1>
@@ -110,12 +108,43 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="flex justify-between gap-5 mx-20 mt-16">
-          {RepostCardList.map((items) => (
-            <div key={items.id} className="">
-              <Cards cardImg={items.cardImg} heading={items.heading} paragh={items.paragh} type={items.type} date={items.date} />
-            </div>
-          ))}
+        <div className="container mx-auto px-10">
+          {" "}
+          {/* Added container for better control */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {RepostCardList.map((items) => (
+              <div key={items.id}>
+                <Cards
+                  cardImg={items.cardImg}
+                  heading={items.heading}
+                  paragh={items.paragh}
+                  type={items.type}
+                  date={items.date}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      {/* Popular Section */}
+      <section className="mt-16">
+        <HeadingBanner text="Popular Posts" />
+        <div className="container mx-auto px-10">
+          {" "}
+          {/* Added container for better control */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {PopularList.map((items) => (
+              <div key={items.id}>
+                <Cards
+                  cardImg={items.cardImg}
+                  heading={items.heading}
+                  paragh={items.paragh}
+                  type={items.type}
+                  date={items.date}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
     </>
