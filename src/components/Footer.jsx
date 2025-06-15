@@ -11,9 +11,9 @@ const Footer = () => {
   ];
 
   return (
-    <>
-      <hr className="h-[1px] bg-primary" />
-      <div className="bg-[#FFFFFF] flex flex-col justify-center items-center my-10 gap-10">
+    <div className="">
+      <hr className="h-[2px] bg-primary" />
+      <div className="bg-[#FFFFFF] flex flex-col justify-center items-center pt-10 gap-10">
         <div className="flex gap-3 items-center cursor-pointer">
           <img className="h-8 w-8" src={logo} alt="blognetic" />
           <h1 className="font-[800] text-[24px] text-[#333333]">
@@ -35,7 +35,7 @@ const Footer = () => {
           </p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .nav-text {
+.nav-text {
   @apply hover:text-[#7C4EE4] cursor-pointer duration-100 transition-all
 }
 
 /* For WebKit (Chrome, Safari, Edge) */
-/* ::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 8px;
   height: 6px;
 }
@@ -24,10 +24,10 @@
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   border-radius: 10px;
-} */
+} 
 
 /* For Firefox */
-/* * {
+* {
   scrollbar-width: thin;
   scrollbar-color: #7C4EE4 #f1f1f1;
-} */ 
+} 
