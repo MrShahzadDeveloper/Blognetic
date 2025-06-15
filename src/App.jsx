@@ -10,8 +10,9 @@ import Footer from "./components/Footer";
 const App = () => {
   return (
     <Router>
+      <div className="bg-[#FAFAFA] ">
       <Navbar />
-      <div className="bg-[#FAFAFA] scrollbar-thin scrollbar-thumb-[#7C4EE4] scrollbar-track-gray-100 ">
+      <div className="scrollbar-thin scrollbar-thumb-[#7C4EE4] scrollbar-track-gray-100 ">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutUs />} />
@@ -21,6 +22,7 @@ const App = () => {
         </Routes>
       </div>
       <Footer />
+      </div>
     </Router>
   );
 };

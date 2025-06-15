@@ -27,8 +27,8 @@ const Home = () => {
         />
 
         {/* Main content */}
-        <div className="container mx-auto h-full flex justify-center lg:justify-between items-center px-8">
-          <div className="flex flex-col gap-6 max-w-[600px] z-10">
+        <div className="container mx-auto h-full flex justify-center flex-col lg:flex-row lg:justify-between items-center px-8">
+          <div className="flex flex-col lg:gap-6 max-w-[600px]  z-10">
             <h3 className="text-white font-semibold text-lg">Featured Post</h3>
             <h1 className="text-white text-4xl lg:text-5xl font-bold leading-tight line-clamp-2 ">
               How AI will Change the Future
@@ -42,14 +42,14 @@ const Home = () => {
             <div className="mt-4">
               <Button
                 text="Read More"
-                textColor="white"
-                bgColor="#7C4EE4" // Purple theme color
+                textColor="#7C4EE4"
+                bgColor="white" // Purple theme color
                 className="px-8 py-3 text-lg hover:bg-purple-700 transition-colors"
               />
             </div>
           </div>
 
-          <div className="hidden lg:block z-10">
+          <div className="flex lg:block z-10">
             <img
               src={homeImg}
               className="w-[410px] h-[410px] object-contain"
@@ -74,12 +74,12 @@ const Home = () => {
       </section>
 
       {/* Our Recent Posts */}
-      <section className="flex flex-col justify-center lg:mt-40">
+      <section className="flex flex-col justify-center mt-10 lg:mt-40">
         <HeadingBanner text="Our Recent Post" />
-        <div className="flex flex-col lg:flex-row justify-between items-center gap-10 lg:gap-20 mx-20 lg:mx-48 mb-16">
+        <div className="hidden md:flex flex-col lg:flex-row justify-between items-center gap-0 lg:gap-20 mx-10 lg:mx-48 mb-16">
           <img
             src={homeImg2}
-            className="w-[400px] h-[300px] md:w-[600px] md:h-[360px] object-cover rounded-lg"
+            className="w-[800px] h-[150px] md:w-[800px] md:h-[460px] object-cover rounded-lg"
             alt="VR & AI Technology illustration"
           />
           <div className="flex flex-col gap-5 justify-start min-w-[200px] sm:w-[400px] md:w-[600px]">
@@ -113,7 +113,7 @@ const Home = () => {
         
         {/* Desktop Grid */}
         <div className="hidden md:block container mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {RepostCardList.map((items) => (
               <div key={items.id} className="mb-8"> {/* Added margin-bottom */}
                 <Cards
@@ -134,10 +134,10 @@ const Home = () => {
       </section>
 
       {/* Popular Section */}
-      <section className="mt-16 mb-20"> {/* Added bottom margin */}
+      <section className="lg:mt-16 lg:mb-20"> {/* Added bottom margin */}
         <HeadingBanner text="Popular Posts" />
         <div className="hidden md:block container mx-auto px-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {PopularList.map((items) => (
               <div key={items.id} className="mb-8"> {/* Added margin-bottom */}
                 <Cards

@@ -25,6 +25,54 @@ export const RepostCardList = [
     date: '10 March 2023',
     cardImg: post3
   },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
+  {
+    id: 3,
+    heading: 'How to Be a Professional Footballer in 2023',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post3
+  },
 ]
 
 export const PopularList = [
@@ -45,7 +93,71 @@ export const PopularList = [
     cardImg: post5,
   },
   {
-    id: 6,
+    id: 698,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 654,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 665,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 62,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 63,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 64,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 65,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 66,
+    heading: 'How to Be a Dancer in 2023 with proper skills?',
+    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
+    type: 'Sports',
+    date: '10 March 2023',
+    cardImg: post6,
+  },
+  {
+    id: 67,
     heading: 'How to Be a Dancer in 2023 with proper skills?',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
     type: 'Sports',
