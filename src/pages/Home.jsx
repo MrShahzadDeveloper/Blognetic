@@ -27,8 +27,8 @@ const Home = () => {
         />
 
         {/* Main content */}
-        <div className="container mx-auto h-full flex justify-center flex-col lg:flex-row lg:justify-between items-center px-8">
-          <div className="flex flex-col lg:gap-6 max-w-[600px]  z-10">
+        <div className="container mx-auto h-full flex justify-center flex-col lg:flex-row lg:justify-between items-center px-8 gap-10 lg:gap-0">
+          <div className="flex flex-col lg:gap-6 max-w-[600px] gap-3 z-10">
             <h3 className="text-white font-semibold text-lg">Featured Post</h3>
             <h1 className="text-white text-4xl lg:text-5xl font-bold leading-tight line-clamp-2 ">
               How AI will Change the Future
@@ -76,10 +76,10 @@ const Home = () => {
       {/* Our Recent Posts */}
       <section className="flex flex-col justify-center mt-10 lg:mt-40">
         <HeadingBanner text="Our Recent Post" />
-        <div className="hidden md:flex flex-col lg:flex-row justify-between items-center gap-0 lg:gap-20 mx-10 lg:mx-48 mb-16">
+        <div className="hidden md:flex flex-col lg:flex-row justify-between items-center gap-0 lg:gap-20 mx-10 lg:mx-32 mb-16">
           <img
             src={homeImg2}
-            className="w-[800px] h-[150px] md:w-[800px] md:h-[460px] object-cover rounded-lg"
+            className="md:w-[600px] md:h-[350px] object-cover rounded-lg"
             alt="VR & AI Technology illustration"
           />
           <div className="flex flex-col gap-5 justify-start min-w-[200px] sm:w-[400px] md:w-[600px]">

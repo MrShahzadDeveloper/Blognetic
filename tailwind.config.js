@@ -6,11 +6,13 @@ export default {
       colors: {
         primary: "#7C4EE4",
         secondary: "#333333",
+        third: '#666666',
+        fourth: '#999999',
       },
     },
     screens: {
       sm: "640px",
-      md: "768px",
+      md: "1024px",
       lg: "1300px",
       xl: "1280px",
     },
