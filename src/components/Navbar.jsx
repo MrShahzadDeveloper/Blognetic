@@ -39,15 +39,21 @@ const Navbar = () => {
             </Link>
           ))}
           <Search strokeWidth={"0.75px"} />
-          <Button text="Contact Us" textColor="white" bgColor={"#7C4EE4"} />
+            <Button link="/contact" text="Contact Us" textColor="white" bgColor={"#7C4EE4"} />
         </div>
         <div onClick={toggleMenu} className="flex lg:hidden cursor-pointer">
           {visible ? <X size={24} /> : <Menu size={24} />}
         </div>
       </div>
       {visible ? (
-        <div onClick={toggleMenu} className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex justify-end">
-          <div onClick={(e) => e.stopPropagation()} className="bg-[#7f61c4] py-28 text-center flex flex-col gap-3 rounded-l-lg w-[75%] max-w-xs h-full">
+        <div
+          onClick={toggleMenu}
+          className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 z-50 flex justify-end"
+        >
+          <div
+            onClick={(e) => e.stopPropagation()}
+            className="bg-[#7f61c4] py-28 text-center flex flex-col gap-3 rounded-l-lg w-[75%] max-w-xs h-full"
+          >
             {menuLinks.map((links) => (
               <Link
                 to={links.href}
