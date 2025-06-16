@@ -5,7 +5,7 @@ const Blogs = () => {
   return (
     <>
       <div class="max-w-4xl flex justify-center items-center flex-col mx-auto md:my-14 p-3 md:p-6 font-sans mt-10 md:mt-4">
-        <h4 class="text-third font-[600] lg:font-[500] mb-4 ">OUR BLOGS</h4>
+        <h4 class="text-third font-[600] lg:font-[500] mb-10 ">OUR BLOGS</h4>
         <h1 class="text-secondary text-2xl lg:text-5xl md:text-4xl font-[700] lg:font-[600] text-center mb-4">
           Find our all blogs from here
         </h1>

@@ -1,4 +1,7 @@
-import { post1, post2, post3, post4, post5, post6, post7, post8, post9 } from '../constant/postImages'
+import { post1, post2, post3, post4, post5, post6, post7, post8, post9 } from './postImages'
+import { Building } from 'lucide-react';
+import { Mail } from 'lucide-react';
+import { Phone } from 'lucide-react';
 
 export const RepostCardList = [
   {
@@ -207,3 +210,22 @@ export const AboutList = [
     para: 'Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.',
   },
 ]
+
+
+export const contactList = [
+  {
+    icon: <Building color='white' strokeWidth={1.5} />,
+    heading: 'Office',
+    para: "Victoria Street, London, UK",
+  },
+  {
+    icon: <Mail color='white' strokeWidth={1.5} />,
+    heading: 'Email',
+    para: "hello@zarrin.com",
+  },
+  {
+    icon: <Phone color='white' strokeWidth={1.5} />,
+    heading: 'Phone',
+    para: "(001) 2342 3451",
+  },
+] 
