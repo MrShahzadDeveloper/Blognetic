@@ -6,7 +6,6 @@ const Footer = () => {
     { name: "Home", href: "/", id: 1 },
     { name: "Blogs", href: "/blogs", id: 2 },
     { name: "About", href: "/about", id: 3 },
-    { name: "Contact Us", href: "/contact", id: 4 },
     { name: "Terms & Conditions", href: "/terms", id: 5 },
   ];
 
