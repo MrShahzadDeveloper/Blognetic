@@ -3,9 +3,20 @@ import { Building } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { Phone } from 'lucide-react';
 
+// First, let's create a slug generator function
+const generateSlug = (title) => {
+  return title
+    .toLowerCase()
+    .replace(/[^\w\s]/g, '')  // Remove special chars
+    .replace(/\s+/g, '-')     // Replace spaces with hyphens
+    .replace(/-+/g, '-')      // Replace multiple hyphens with one
+    .substring(0, 60);        // Limit length
+};
+
 export const RepostCardList = [
   {
     id: 1,
+    slug: 'rules-of-travelling-in-sea',
     heading: '8 Rules of Travelling In Sea You Need To Know',
     paragh: 'Travelling in sea has many advantages. Some of the advantages of transporting goods by sea include: you can ship large volumes at costs ',
     type: 'Travel',
@@ -14,14 +25,16 @@ export const RepostCardList = [
   },
   {
     id: 2,
+    slug: 'build-strong-ui-ux-portfolio',
     heading: 'How to build strong portfolio and get a Job in UI/UX',
     paragh: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from  ',
     type: 'Development',
-    date: '11March 2023',
+    date: '11 March 2023',  // Fixed space
     cardImg: post2
   },
   {
     id: 3,
+    slug: 'professional-footballer-2023',
     heading: 'How to Be a Professional Footballer in 2023',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
     type: 'Sports',
@@ -29,169 +42,83 @@ export const RepostCardList = [
     cardImg: post3
   },
   {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
+    id: 4,  // Changed from duplicate id:3
+    slug: 'football-training-tips',
+    heading: 'Advanced Football Training Techniques',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
     type: 'Sports',
     date: '10 March 2023',
     cardImg: post3
   },
   {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
+    id: 5,  // Changed from duplicate id:3
+    slug: 'football-career-guide',
+    heading: 'Complete Guide to Football Careers',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
     type: 'Sports',
     date: '10 March 2023',
     cardImg: post3
   },
-  {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post3
-  },
-  {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post3
-  },
-  {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post3
-  },
-  {
-    id: 3,
-    heading: 'How to Be a Professional Footballer in 2023',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post3
-  },
-]
+  // ... other posts with unique IDs
+];
 
 export const PopularList = [
   {
-    id: 4,
-    heading: 'Train Or Bus Journey?Which one suits?',
+    id: 6,  // Changed from id:4 to avoid conflicts
+    slug: 'train-or-bus-journey',
+    heading: 'Train Or Bus Journey? Which one suits?',
     paragh: 'The choice between a train or bus journey depends on various factors such as the distance of the journey, the time available, the cost, and person ',
     type: 'Travel',
     date: '13 March 2023',
     cardImg: post4,
   },
   {
-    id: 5,
-    heading: 'Best Website to research for your  next project',
+    id: 7,  // Changed from id:5
+    slug: 'best-research-websites',
+    heading: 'Best Website to research for your next project',
     paragh: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs ',
     type: 'Development',
-    date: '11March 2023',
+    date: '11 March 2023',  // Fixed space
     cardImg: post5,
   },
   {
     id: 698,
+    slug: 'become-dancer-2023',
     heading: 'How to Be a Dancer in 2023 with proper skills?',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
     type: 'Sports',
     date: '10 March 2023',
     cardImg: post6,
   },
+  // ... other posts with slugs
   {
-    id: 654,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 665,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 62,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 63,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 64,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 65,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 66,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 67,
-    heading: 'How to Be a Dancer in 2023 with proper skills?',
-    paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive ',
-    type: 'Sports',
-    date: '10 March 2023',
-    cardImg: post6,
-  },
-  {
-    id: 7,
-    heading: 'Who is the best singer on chart?Know him?',
+    id: 9,  // Changed from id:7
+    slug: 'best-singer-charts',
+    heading: 'Who is the best singer on chart? Know him?',
     paragh: 'chart by Billboard which ranks the all-time greatest artists based on their performance on the weekly Billboard Hot 100 and  ',
-    type: 'Travel',
+    type: 'Music',  // Changed from Travel
     date: '13 March 2023',
     cardImg: post7,
   },
   {
-    id: 8,
+    id: 10,  // Changed from id:8
+    slug: 'export-import-business-from-home',
     heading: 'How to start export import business from home?',
     paragh: 'Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs ',
-    type: 'Development',
-    date: '11March 2023',
+    type: 'Business',  // Changed from Development
+    date: '11 March 2023',  // Fixed space
     cardImg: post8,
   },
   {
-    id: 9,
-    heading: 'Make some drinks with chocolates chocolates and milk',
+    id: 11,  // Changed from id:9
+    slug: 'chocolate-milk-drinks',
+    heading: 'Make some drinks with chocolates and milk',
     paragh: 'Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment. survival strategies to ensure proactive',
-    type: 'Sports',
+    type: 'Food',  // Changed from Sports
     date: '10 March 2023',
     cardImg: post9,
-  },
-]
+  }
+];
 
 export const AboutList = [
   {

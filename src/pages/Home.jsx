@@ -122,6 +122,8 @@ const Home = () => {
                   paragh={items.paragh}
                   type={items.type}
                   date={items.date}
+                  id={items.id}
+                  slug={items.slug}
                   className="hover:shadow-lg transition-shadow" // Added hover effect
                 />
               </div>
@@ -146,6 +148,8 @@ const Home = () => {
                   paragh={items.paragh}
                   type={items.type}
                   date={items.date}
+                  id={items.id}
+                  slug={items.slug}
                   className="hover:shadow-lg transition-shadow" // Added hover effect
                 />
               </div>

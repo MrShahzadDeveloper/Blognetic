@@ -1,6 +1,7 @@
 import Cards from "../components/Cards";
 import { PopularList } from "../constant/cardLists";
 
+
 const Blogs = () => {
   return (
     <>
@@ -27,6 +28,8 @@ const Blogs = () => {
                 paragh={items.paragh}
                 type={items.type}
                 date={items.date}
+                id={items.id}
+                slug={items.slug}
                 className="hover:shadow-lg transition-shadow" // Added hover effect
               />
             </div>
