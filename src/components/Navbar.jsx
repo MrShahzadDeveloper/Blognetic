@@ -62,7 +62,7 @@ const Navbar = () => {
             <Link
               to={links.href}
               key={links.id}
-              className="hover:text-[#7C4EE4] cursor-pointer"
+              className="hover:text-[#7C4EE4] cursor-pointer duration-200 transition-all"
             >
               {links.name}
             </Link>
