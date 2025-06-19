@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import backgrounImg from "../assets/waterMark.png";
 import backgrounImg2 from "../assets/waterMark2.png";
 import homeImg from "../assets/home-main.png";
@@ -10,6 +11,17 @@ import MobileCarousel from "../components/MoblieCarousel";
 import { PopularList, RepostCardList } from "../constant/cardLists";
 
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleReadMore = (blog) => {
+    navigate(`/blogs/${blog.slug}`, {
+      state: { 
+        ...blog,
+        scrollPosition: window.scrollY // Save current scroll position
+      }
+    });
+  };
+
   return (
     <>
       {/* First Section */}
@@ -43,8 +55,16 @@ const Home = () => {
               <Button
                 text="Read More"
                 textColor="#7C4EE4"
-                bgColor="white" // Purple theme color
+                bgColor="white"
                 className="px-8 py-3 text-lg hover:bg-purple-700 transition-colors"
+                onClick={() => handleReadMore({
+                  slug: "how-ai-will-change-the-future",
+                  heading: "How AI will Change the Future",
+                  paragh: "The future of AI will see home robots having enhanced intelligence...",
+                  type: "AI Technology",
+                  date: "15 March 2025",
+                  cardImg: "/path-to-image.jpg"
+                })}
               />
             </div>
           </div>
@@ -91,8 +111,7 @@ const Home = () => {
             </div>
             <div className="flex flex-col gap-5">
               <h1 className="text-4xl font-bold text-secondary leading-snug line-clamp-2">
-                How to make a Game look more attractive with New VR & AI
-                Technology
+                How to make a Game look more attractive with New VR & AI Technology
               </h1>
               <p className="text-gray-600 line-clamp-3">
                 Google has been investing in AI for many years and bringing its
@@ -106,6 +125,14 @@ const Home = () => {
                 textColor="white"
                 bgColor="#7C4EE4"
                 className="hover:bg-purple-700 transition-colors"
+                onClick={() => handleReadMore({
+                  slug: "vr-ai-game-design",
+                  heading: "How to make a Game look more attractive with New VR & AI Technology",
+                  paragh: "Google has been investing in AI for many years...",
+                  type: "Development",
+                  date: "16 March 2025",
+                  cardImg: "/path-to-image.jpg"
+                })}
               />
             </div>
           </div>
@@ -115,7 +142,7 @@ const Home = () => {
         <div className="hidden md:block container mx-auto px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {RepostCardList.map((items) => (
-              <div key={items.id} className="mb-8"> {/* Added margin-bottom */}
+              <div key={items.id} className="mb-8">
                 <Cards
                   cardImg={items.cardImg}
                   heading={items.heading}
@@ -124,7 +151,8 @@ const Home = () => {
                   date={items.date}
                   id={items.id}
                   slug={items.slug}
-                  className="hover:shadow-lg transition-shadow" // Added hover effect
+                  onClick={() => handleReadMore(items)}
+                  className="hover:shadow-lg transition-shadow cursor-pointer"
                 />
               </div>
             ))}
@@ -136,12 +164,12 @@ const Home = () => {
       </section>
 
       {/* Popular Section */}
-      <section className="lg:mt-16 lg:mb-20"> {/* Added bottom margin */}
+      <section className="lg:mt-16 lg:mb-20">
         <HeadingBanner text="Popular Posts" />
         <div className="hidden md:block container mx-auto px-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {PopularList.map((items) => (
-              <div key={items.id} className="mb-8"> {/* Added margin-bottom */}
+              <div key={items.id} className="mb-8">
                 <Cards
                   cardImg={items.cardImg}
                   heading={items.heading}
@@ -150,7 +178,8 @@ const Home = () => {
                   date={items.date}
                   id={items.id}
                   slug={items.slug}
-                  className="hover:shadow-lg transition-shadow" // Added hover effect
+                  onClick={() => handleReadMore(items)}
+                  className="hover:shadow-lg transition-shadow cursor-pointer"
                 />
               </div>
             ))}

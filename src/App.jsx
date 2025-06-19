@@ -20,13 +20,10 @@ const ScrollToTop = () => {
 
   useEffect(() => {
     window.history.scrollRestoration = "manual";
-
-    // Only scroll to top if it's a new page load
+    
+    // Just set scroll position to top without animation
     if (!window.history.state || !window.history.state.fromBlog) {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
+      window.scrollTo(0, 0);
     }
   }, [pathname]);
 
@@ -36,10 +33,8 @@ const ScrollToTop = () => {
 const App = () => {
   return (
     <Router>
-      <div className="bg-primary">
-        <Navbar />
-      </div>
       <div className="bg-[#FAFAFA]">
+        <Navbar />
         <div className="scrollbar-thin scrollbar-thumb-[#7C4EE4] scrollbar-track-gray-100">
           <ScrollToTop />
           <Routes>

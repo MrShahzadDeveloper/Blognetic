@@ -1,28 +1,9 @@
 import { useParams, useLocation, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
 
 const BlogDetails = () => {
   const { slug } = useParams();
   const { state } = useLocation();
   const navigate = useNavigate();
-
-  useEffect(() => {
-    // Mark that we're coming from a blog post
-    window.history.replaceState(
-      { ...window.history.state, fromBlog: true },
-      ""
-    );
-
-    // Add a back button if none exists in the UI
-    const handleBackButton = () => {
-      navigate(-1);
-    };
-
-    window.addEventListener("popstate", handleBackButton);
-    return () => {
-      window.removeEventListener("popstate", handleBackButton);
-    };
-  }, [navigate]);
 
   if (!state) {
     return (

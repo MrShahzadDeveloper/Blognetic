@@ -22,7 +22,7 @@ const Footer = () => {
         
         <div className="hidden sm:flex gap-5">
           {footerLinks.map((links) => (
-            <Link to={links.href} key={links.id} className="nav-text">
+            <Link to={links.href} key={links.id} className="nav-text duration-200 transition-all">
               {links.name}
             </Link>
           ))}

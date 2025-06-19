@@ -18,7 +18,7 @@ const Cards = ({ cardImg, type, date, heading, paragh, id, slug }) => {
 
   return (
     <div className="bg-white p-5 rounded-2xl shadow-md m-2 flex flex-col gap-5 max-w-[400px]">
-      <img src={cardImg} className='w-auto h-[300px] object-cover rounded-xl' />
+      <img src={cardImg} className='w-auto h-[300px] object-cover rounded-xl' alt={heading} />
       <div className="flex flex-col gap-3 flex-1">
         <div className="flex gap-3">
           <span className="text-sm text-secondary font-[700]">{type}</span>
@@ -28,7 +28,7 @@ const Cards = ({ cardImg, type, date, heading, paragh, id, slug }) => {
           <h1 className="text-2xl font-[700] text-secondary line-clamp-2">{heading}</h1>
           <p className="text-[#666666] line-clamp-3 flex-1">{paragh}</p>
           
-          <div 
+          <button
             onClick={handleReadMore}
             style={{
               backgroundColor: '#7C4EE4',
@@ -39,7 +39,7 @@ const Cards = ({ cardImg, type, date, heading, paragh, id, slug }) => {
             <span style={{ color: 'white' }} className="md:font-[600]">
               Read More
             </span>
-          </div>
+          </button>
         </div>
       </div>
     </div>
